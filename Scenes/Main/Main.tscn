@@ -1,0 +1,1633 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Fonts/DroidSans.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Sprites/IconFolder.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/IconNote.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Main/UnderConstruction.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Main/Main.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Main/Messages.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/Main/Graph.gd" type="Script" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 128
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 13
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Panel" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logout" type="Button" parent="Background"]
+margin_left = 929.64
+margin_top = 7.0
+margin_right = 1011.64
+margin_bottom = 27.0
+text = "LOG UD"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Schedule" type="ScrollContainer" parent="Background"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 734.0
+margin_bottom = 341.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="Background/Schedule"]
+margin_right = 715.0
+margin_bottom = 466.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Background/Schedule/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 708.0
+margin_bottom = 459.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer"]
+margin_right = 701.0
+margin_bottom = 452.0
+
+[node name="VSeparator" type="VSeparator" parent="Background/Schedule/PanelContainer/MarginContainer/HBoxContainer2"]
+margin_left = 77.0
+margin_right = 81.0
+margin_bottom = 452.0
+size_flags_horizontal = 10
+size_flags_stretch_ratio = 12.0
+
+[node name="VSeparator2" type="VSeparator" parent="Background/Schedule/PanelContainer/MarginContainer/HBoxContainer2"]
+margin_left = 202.0
+margin_right = 206.0
+margin_bottom = 452.0
+size_flags_horizontal = 10
+size_flags_stretch_ratio = 18.0
+
+[node name="VSeparator3" type="VSeparator" parent="Background/Schedule/PanelContainer/MarginContainer/HBoxContainer2"]
+margin_left = 327.0
+margin_right = 331.0
+margin_bottom = 452.0
+size_flags_horizontal = 10
+size_flags_stretch_ratio = 18.0
+
+[node name="VSeparator4" type="VSeparator" parent="Background/Schedule/PanelContainer/MarginContainer/HBoxContainer2"]
+margin_left = 449.0
+margin_right = 453.0
+margin_bottom = 452.0
+size_flags_horizontal = 10
+size_flags_stretch_ratio = 17.5
+
+[node name="VSeparator5" type="VSeparator" parent="Background/Schedule/PanelContainer/MarginContainer/HBoxContainer2"]
+margin_left = 574.0
+margin_right = 578.0
+margin_bottom = 452.0
+size_flags_horizontal = 10
+size_flags_stretch_ratio = 18.0
+
+[node name="VSeparator6" type="VSeparator" parent="Background/Schedule/PanelContainer/MarginContainer/HBoxContainer2"]
+modulate = Color( 1, 1, 1, 0 )
+show_behind_parent = true
+margin_left = 697.0
+margin_right = 701.0
+margin_bottom = 452.0
+size_flags_horizontal = 10
+size_flags_stretch_ratio = 17.0
+
+[node name="VBox" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer"]
+margin_right = 701.0
+margin_bottom = 452.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Days" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox"]
+margin_right = 701.0
+margin_bottom = 28.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="PanelContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Days"]
+margin_right = 80.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 12.0
+
+[node name="Label" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Days/Time"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 73.0
+margin_bottom = 21.0
+text = "Tidspunkt"
+
+[node name="Monday" type="PanelContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Days"]
+margin_left = 84.0
+margin_right = 204.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Label" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Days/Monday"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 113.0
+margin_bottom = 21.0
+size_flags_stretch_ratio = 18.0
+text = "Mandag"
+
+[node name="Tuesday" type="PanelContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Days"]
+margin_left = 208.0
+margin_right = 328.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Label" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Days/Tuesday"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 113.0
+margin_bottom = 21.0
+text = "Tirsdag"
+
+[node name="Wednesday" type="PanelContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Days"]
+margin_left = 332.0
+margin_right = 452.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Label" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Days/Wednesday"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 113.0
+margin_bottom = 21.0
+text = "Onsdag"
+
+[node name="Thursday" type="PanelContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Days"]
+margin_left = 456.0
+margin_right = 576.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Label" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Days/Thursday"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 113.0
+margin_bottom = 21.0
+text = "Torsdag"
+
+[node name="Friday" type="PanelContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Days"]
+margin_left = 580.0
+margin_right = 701.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Days/Friday"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 114.0
+margin_bottom = 21.0
+text = "Fredag"
+
+[node name="Class1" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox"]
+margin_top = 32.0
+margin_right = 701.0
+margin_bottom = 92.0
+
+[node name="Time" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1"]
+margin_right = 80.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 12.0
+text = "08:00-09:00"
+align = 1
+
+[node name="Monday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1"]
+margin_left = 84.0
+margin_right = 204.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Monday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Engelsk B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Monday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.071"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Monday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Monday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Monday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Tuesday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1"]
+margin_left = 208.0
+margin_right = 328.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Tuesday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Kemi B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Tuesday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.024, 1.2.074"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Tuesday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Tuesday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Tuesday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Wednesday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1"]
+margin_left = 332.0
+margin_right = 452.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Wednesday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Kemi B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Wednesday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.024, 1.2.074"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Wednesday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Wednesday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Wednesday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Thursday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1"]
+margin_left = 456.0
+margin_right = 576.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Thursday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Informatik B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Thursday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.074"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Thursday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Thursday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Thursday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Friday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1"]
+margin_left = 580.0
+margin_right = 701.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Friday"]
+margin_right = 121.0
+margin_bottom = 14.0
+text = "Programmering B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Friday"]
+margin_top = 18.0
+margin_right = 121.0
+margin_bottom = 32.0
+text = "1.2.072"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Friday"]
+margin_top = 36.0
+margin_right = 121.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Friday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class1/Friday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="HSeparator" type="HSeparator" parent="Background/Schedule/PanelContainer/MarginContainer/VBox"]
+margin_top = 96.0
+margin_right = 701.0
+margin_bottom = 100.0
+
+[node name="Class2" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox"]
+margin_top = 104.0
+margin_right = 701.0
+margin_bottom = 164.0
+
+[node name="Time" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2"]
+margin_right = 80.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 12.0
+text = "09:05-10:05"
+align = 1
+
+[node name="Monday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2"]
+margin_left = 84.0
+margin_right = 204.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Monday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Engelsk B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Monday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.024, 1.2.074"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Monday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Monday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Monday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Tuesday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2"]
+margin_left = 208.0
+margin_right = 328.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Tuesday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Engelsk B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Tuesday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.024, 1.2.074"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Tuesday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Tuesday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Tuesday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Wednesday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2"]
+margin_left = 332.0
+margin_right = 452.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Wednesday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Engelsk B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Wednesday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.024, 1.2.074"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Wednesday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Wednesday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Wednesday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Thursday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2"]
+margin_left = 456.0
+margin_right = 576.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Thursday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Matematik A"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Thursday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.076"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Thursday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Thursday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Thursday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Friday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2"]
+margin_left = 580.0
+margin_right = 701.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Friday"]
+margin_right = 121.0
+margin_bottom = 14.0
+text = "Programmering B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Friday"]
+margin_top = 18.0
+margin_right = 121.0
+margin_bottom = 32.0
+text = "1.2.072"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Friday"]
+margin_top = 36.0
+margin_right = 121.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Friday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class2/Friday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="HSeparator2" type="HSeparator" parent="Background/Schedule/PanelContainer/MarginContainer/VBox"]
+margin_top = 168.0
+margin_right = 701.0
+margin_bottom = 172.0
+
+[node name="Class3" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox"]
+margin_top = 176.0
+margin_right = 701.0
+margin_bottom = 236.0
+
+[node name="Time" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3"]
+margin_right = 80.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 12.0
+text = "10:15-11:15"
+align = 1
+
+[node name="Monday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3"]
+margin_left = 84.0
+margin_right = 204.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Monday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Fysik B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Monday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.019"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Monday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Monday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Monday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Tuesday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3"]
+margin_left = 208.0
+margin_right = 328.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Tuesday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Matematik A"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Tuesday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.071"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Tuesday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Tuesday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Tuesday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Wednesday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3"]
+margin_left = 332.0
+margin_right = 452.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Wednesday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Kemi B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Wednesday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.074"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Wednesday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Wednesday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Wednesday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Thursday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3"]
+margin_left = 456.0
+margin_right = 576.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Thursday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Engelsk B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Thursday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.024, 1.2.074"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Thursday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Thursday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Thursday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Friday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3"]
+margin_left = 580.0
+margin_right = 701.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Friday"]
+margin_right = 121.0
+margin_bottom = 14.0
+text = "Idehistorie B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Friday"]
+margin_top = 18.0
+margin_right = 121.0
+margin_bottom = 32.0
+text = "1.2.072"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Friday"]
+margin_top = 36.0
+margin_right = 121.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Friday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class3/Friday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="HSeparator3" type="HSeparator" parent="Background/Schedule/PanelContainer/MarginContainer/VBox"]
+margin_top = 240.0
+margin_right = 701.0
+margin_bottom = 244.0
+
+[node name="Class4" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox"]
+margin_top = 248.0
+margin_right = 701.0
+margin_bottom = 308.0
+
+[node name="Time" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4"]
+margin_right = 80.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 12.0
+text = "11:45-12:45"
+align = 1
+
+[node name="Monday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4"]
+margin_left = 84.0
+margin_right = 204.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Monday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Fysik B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Monday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.019"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Monday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Monday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Monday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Tuesday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4"]
+margin_left = 208.0
+margin_right = 328.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Tuesday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Teknologi B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Tuesday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1A.001"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Tuesday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Tuesday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Tuesday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Wednesday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4"]
+margin_left = 332.0
+margin_right = 452.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Wednesday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Informatik B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Wednesday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.074"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Wednesday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Wednesday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Wednesday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Thursday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4"]
+margin_left = 456.0
+margin_right = 576.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Thursday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Idehistorie B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Thursday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.072"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Thursday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Thursday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Thursday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Friday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4"]
+margin_left = 580.0
+margin_right = 701.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Friday"]
+margin_right = 121.0
+margin_bottom = 14.0
+text = "Teknologi B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Friday"]
+margin_top = 18.0
+margin_right = 121.0
+margin_bottom = 32.0
+text = "1A.001"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Friday"]
+margin_top = 36.0
+margin_right = 121.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Friday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class4/Friday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="HSeparator4" type="HSeparator" parent="Background/Schedule/PanelContainer/MarginContainer/VBox"]
+margin_top = 312.0
+margin_right = 701.0
+margin_bottom = 316.0
+
+[node name="Class5" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox"]
+margin_top = 320.0
+margin_right = 701.0
+margin_bottom = 380.0
+
+[node name="Time" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5"]
+margin_right = 80.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 12.0
+text = "12:55-13:55"
+align = 1
+
+[node name="Monday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5"]
+margin_left = 84.0
+margin_right = 204.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Monday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Fysik B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Monday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.019"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Monday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Monday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Monday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Tuesday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5"]
+margin_left = 208.0
+margin_right = 328.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Tuesday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Teknologi B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Tuesday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1A.001"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Tuesday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Tuesday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Tuesday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Wednesday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5"]
+margin_left = 332.0
+margin_right = 452.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Wednesday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Dansk A"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Wednesday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.076"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Wednesday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Wednesday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Wednesday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Thursday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5"]
+margin_left = 456.0
+margin_right = 576.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Thursday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Fysik B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Thursday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.015"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Thursday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Thursday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Thursday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Friday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5"]
+margin_left = 580.0
+margin_right = 701.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Friday"]
+margin_right = 121.0
+margin_bottom = 14.0
+text = "Teknologi B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Friday"]
+margin_top = 18.0
+margin_right = 121.0
+margin_bottom = 32.0
+text = "1A.001"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Friday"]
+margin_top = 36.0
+margin_right = 121.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Friday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class5/Friday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="HSeparator5" type="HSeparator" parent="Background/Schedule/PanelContainer/MarginContainer/VBox"]
+margin_top = 384.0
+margin_right = 701.0
+margin_bottom = 388.0
+
+[node name="Class6" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox"]
+margin_top = 392.0
+margin_right = 701.0
+margin_bottom = 452.0
+
+[node name="Time" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6"]
+margin_right = 80.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 12.0
+text = "14:00-15:00"
+align = 1
+
+[node name="Monday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6"]
+margin_left = 84.0
+margin_right = 204.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Monday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Dansk A"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Monday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.074"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Monday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Monday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Monday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Tuesday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6"]
+margin_left = 208.0
+margin_right = 328.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Tuesday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Teknologi B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Tuesday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1A.001"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Tuesday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Tuesday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Tuesday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Wednesday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6"]
+margin_left = 332.0
+margin_right = 452.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Wednesday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Engelsk B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Wednesday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.072"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Wednesday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Wednesday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Wednesday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Thursday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6"]
+margin_left = 456.0
+margin_right = 576.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Subject" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Thursday"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Fysik B"
+
+[node name="Classroom" type="Label" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Thursday"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 32.0
+text = "1.2.015"
+
+[node name="Attachments" type="HBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Thursday"]
+margin_top = 36.0
+margin_right = 120.0
+margin_bottom = 60.0
+
+[node name="ButtonFolder" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Thursday/Attachments"]
+margin_right = 24.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 2 )
+
+[node name="ButtonNote" type="TextureButton" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6/Thursday/Attachments"]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 3 )
+
+[node name="Friday" type="VBoxContainer" parent="Background/Schedule/PanelContainer/MarginContainer/VBox/Class6"]
+margin_left = 580.0
+margin_right = 701.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 18.0
+
+[node name="Points" type="PanelContainer" parent="Background"]
+margin_left = 741.0
+margin_top = 34.0
+margin_right = 1015.0
+margin_bottom = 343.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Data" type="VBoxContainer" parent="Background/Points"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 267.0
+margin_bottom = 302.0
+
+[node name="AbsenceStreak" type="Panel" parent="Background/Points/Data"]
+margin_right = 260.0
+margin_bottom = 95.0
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Background/Points/Data/AbsenceStreak"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -105.0
+margin_top = -46.5
+margin_right = 105.0
+margin_bottom = 46.5
+text = "DAGE UDEN FRAVÆR
+<X>"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GradeMultiplier" type="Panel" parent="Background/Points/Data"]
+margin_top = 99.0
+margin_right = 260.0
+margin_bottom = 194.0
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Background/Points/Data/GradeMultiplier"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -105.0
+margin_top = -46.5
+margin_right = 105.0
+margin_bottom = 46.5
+text = "KARAKTER STIGNING
+<X>"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Panel" parent="Background/Points/Data"]
+margin_top = 198.0
+margin_right = 260.0
+margin_bottom = 295.0
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Background/Points/Data/Value"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -105.0
+margin_top = -46.5
+margin_right = 105.0
+margin_bottom = 46.5
+text = "ANTAL POINT
+<X>"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shop" type="Button" parent="Background/Points/Data"]
+visible = false
+margin_top = 273.0
+margin_right = 260.0
+margin_bottom = 293.0
+text = "Butikken"
+
+[node name="AcceptDialog" type="AcceptDialog" parent="Background/Points"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 267.0
+margin_bottom = 302.0
+resizable = true
+dialog_text = "SHOPPEN ER UNDER KONSTRUKTION."
+dialog_autowrap = true
+script = ExtResource( 4 )
+
+[node name="Messages" type="PanelContainer" parent="Background"]
+margin_left = 741.0
+margin_top = 352.0
+margin_right = 1015.0
+margin_bottom = 593.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/Messages"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 267.0
+margin_bottom = 234.0
+
+[node name="Label" type="Label" parent="Background/Messages/VBoxContainer"]
+margin_right = 260.0
+margin_bottom = 14.0
+size_flags_vertical = 0
+text = "BESKEDER"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Panel" parent="Background/Messages/VBoxContainer"]
+visible = false
+margin_top = 18.0
+margin_right = 260.0
+margin_bottom = 36.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="MessageContainer" type="ScrollContainer" parent="Background/Messages/VBoxContainer"]
+margin_top = 18.0
+margin_right = 260.0
+margin_bottom = 227.0
+size_flags_vertical = 3
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/Messages/VBoxContainer/MessageContainer"]
+margin_right = 260.0
+margin_bottom = 209.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MysteryAbsence" type="PanelContainer" parent="Background"]
+margin_left = 547.0
+margin_top = 352.0
+margin_right = 736.0
+margin_bottom = 593.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSplitContainer" type="VSplitContainer" parent="Background/MysteryAbsence"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 182.0
+margin_bottom = 234.0
+
+[node name="Label" type="Label" parent="Background/MysteryAbsence/VSplitContainer"]
+margin_right = 175.0
+margin_bottom = 150.0
+custom_fonts/font = SubResource( 1 )
+text = "?"
+align = 1
+
+[node name="Label2" type="Label" parent="Background/MysteryAbsence/VSplitContainer"]
+margin_top = 162.0
+margin_right = 175.0
+margin_bottom = 227.0
+size_flags_vertical = 5
+custom_fonts/font = SubResource( 2 )
+text = "Tjek næste uge for at se opdateret fraværsprocent"
+align = 1
+autowrap = true
+
+[node name="Absence" type="PanelContainer" parent="Background"]
+margin_left = 7.0
+margin_top = 352.0
+margin_right = 561.0
+margin_bottom = 593.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSplitContainer" type="VSplitContainer" parent="Background/Absence"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 547.0
+margin_bottom = 234.0
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="Background/Absence/VSplitContainer"]
+margin_right = 540.0
+margin_bottom = 14.0
+text = "Fravær"
+align = 1
+uppercase = true
+
+[node name="GraphContainer" type="PanelContainer" parent="Background/Absence/VSplitContainer"]
+margin_top = 22.0
+margin_right = 540.0
+margin_bottom = 227.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Graph" type="Control" parent="Background/Absence/VSplitContainer/GraphContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 533.0
+margin_bottom = 198.0
+script = ExtResource( 8 )
+
+[node name="MarginContainer" type="MarginContainer" parent="Background/Absence/VSplitContainer/GraphContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 533.0
+margin_bottom = 198.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/Absence/VSplitContainer/GraphContainer/MarginContainer"]
+margin_right = 526.0
+margin_bottom = 191.0
+
+[node name="HSeparator" type="HSeparator" parent="Background/Absence/VSplitContainer/GraphContainer/MarginContainer/VBoxContainer"]
+margin_right = 526.0
+margin_bottom = 13.0
+size_flags_vertical = 3
+
+[node name="HSeparator2" type="HSeparator" parent="Background/Absence/VSplitContainer/GraphContainer/MarginContainer/VBoxContainer"]
+margin_top = 17.0
+margin_right = 526.0
+margin_bottom = 30.0
+size_flags_vertical = 3
+
+[node name="HSeparator3" type="HSeparator" parent="Background/Absence/VSplitContainer/GraphContainer/MarginContainer/VBoxContainer"]
+margin_top = 34.0
+margin_right = 526.0
+margin_bottom = 47.0
+size_flags_vertical = 3
+
+[node name="HSeparator4" type="HSeparator" parent="Background/Absence/VSplitContainer/GraphContainer/MarginContainer/VBoxContainer"]
+margin_top = 51.0
+margin_right = 526.0
+margin_bottom = 64.0
+size_flags_vertical = 3
+
+[node name="HSeparator5" type="HSeparator" parent="Background/Absence/VSplitContainer/GraphContainer/MarginContainer/VBoxContainer"]
+margin_top = 68.0
+margin_right = 526.0
+margin_bottom = 81.0
+size_flags_vertical = 3
+
+[node name="HSeparator6" type="HSeparator" parent="Background/Absence/VSplitContainer/GraphContainer/MarginContainer/VBoxContainer"]
+margin_top = 85.0
+margin_right = 526.0
+margin_bottom = 98.0
+size_flags_vertical = 3
+
+[node name="HSeparator7" type="HSeparator" parent="Background/Absence/VSplitContainer/GraphContainer/MarginContainer/VBoxContainer"]
+margin_top = 102.0
+margin_right = 526.0
+margin_bottom = 115.0
+size_flags_vertical = 3
+
+[node name="HSeparator8" type="HSeparator" parent="Background/Absence/VSplitContainer/GraphContainer/MarginContainer/VBoxContainer"]
+margin_top = 119.0
+margin_right = 526.0
+margin_bottom = 132.0
+size_flags_vertical = 3
+
+[node name="HSeparator9" type="HSeparator" parent="Background/Absence/VSplitContainer/GraphContainer/MarginContainer/VBoxContainer"]
+margin_top = 136.0
+margin_right = 526.0
+margin_bottom = 149.0
+size_flags_vertical = 3
+
+[node name="HSeparator10" type="HSeparator" parent="Background/Absence/VSplitContainer/GraphContainer/MarginContainer/VBoxContainer"]
+margin_top = 153.0
+margin_right = 526.0
+margin_bottom = 166.0
+size_flags_vertical = 3
+
+[node name="HSeparator11" type="HSeparator" parent="Background/Absence/VSplitContainer/GraphContainer/MarginContainer/VBoxContainer"]
+margin_top = 170.0
+margin_right = 526.0
+margin_bottom = 191.0
+size_flags_vertical = 3
+
+[node name="VSeparator" type="VSeparator" parent="Background"]
+modulate = Color( 0.431373, 0.431373, 0.431373, 1 )
+margin_left = 737.184
+margin_right = 741.184
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator" type="HSeparator" parent="Background"]
+modulate = Color( 0.431373, 0.431373, 0.431373, 1 )
+margin_top = 345.854
+margin_right = 1024.0
+margin_bottom = 349.854
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Background/Logout" to="." method="_on_Logout_pressed"]
+[connection signal="pressed" from="Background/Points/Data/Shop" to="Background/Points/AcceptDialog" method="_on_Shop_pressed"]

@@ -1,0 +1,97 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Login/Login.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Login" type="Panel" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Login"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -147.0
+margin_top = -95.0
+margin_right = 147.0
+margin_bottom = 95.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelBrugernavn" type="Label" parent="Login/VBoxContainer"]
+margin_right = 294.0
+margin_bottom = 14.0
+text = "Brugernavn"
+align = 1
+
+[node name="LineUsername" type="LineEdit" parent="Login/VBoxContainer"]
+margin_top = 18.0
+margin_right = 294.0
+margin_bottom = 42.0
+clear_button_enabled = true
+placeholder_text = "brugernavn"
+
+[node name="LabelAdgangskode" type="Label" parent="Login/VBoxContainer"]
+margin_top = 46.0
+margin_right = 294.0
+margin_bottom = 60.0
+text = "Adgangskode"
+align = 1
+
+[node name="LinePassword" type="LineEdit" parent="Login/VBoxContainer"]
+margin_top = 64.0
+margin_right = 294.0
+margin_bottom = 88.0
+secret = true
+clear_button_enabled = true
+placeholder_text = "password"
+
+[node name="Status" type="Label" parent="Login/VBoxContainer"]
+margin_top = 92.0
+margin_right = 294.0
+margin_bottom = 106.0
+align = 1
+
+[node name="ButtonLogin" type="Button" parent="Login/VBoxContainer"]
+margin_top = 110.0
+margin_right = 294.0
+margin_bottom = 130.0
+text = "LOG IND"
+
+[node name="ShowPassword" type="CheckBox" parent="Login"]
+margin_left = 659.0
+margin_top = 268.0
+margin_right = 794.0
+margin_bottom = 297.0
+text = "Vis Adgangskode"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 127.605
+margin_top = 81.6048
+margin_right = 280.605
+margin_bottom = 163.605
+text = "Brugernavn: user1
+Adgangskode: hello123
+
+Brugernavn: user2
+Adgangskode: sometest"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Login/VBoxContainer/ButtonLogin" to="." method="_on_ButtonLogin_pressed"]
+[connection signal="pressed" from="Login/ShowPassword" to="." method="_on_ShowPassword_pressed"]

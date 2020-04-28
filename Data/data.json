@@ -1,0 +1,51 @@
+{
+	"user1":
+	{
+		"absence": [0, 50, 70, 30, 100, 30, 20, 10],
+		"messages":
+		{
+			"1":
+			{
+				"unread": true,
+				"date": "10.04.2020",
+				"sender": "MHC",
+				"subject": "SOC feedback",
+				"message": "Det bedste vi nogensinde har set, bedste elev!\n\n(okay, det er måske ikke en rigtig besked det her)"
+			},
+
+			"2":
+			{
+				"unread": false,
+				"date": "14.04.2020",
+				"sender": "MHC",
+				"subject": "Aflevering Motorvej E45 FREDAG",
+				"message": "Hej alle 2z´er!\nJeg har udskudt afleveringen af Motorvej E45 til på fredag.\nSå har I mulighed for at arbejde med den på torsdag i de to matematiktimer, hvis I vil.\n\nHilsen Henrik"
+			},
+
+			"3":
+			{
+				"unread": false,
+				"date": "14.04.2020",
+				"sender": "MHC",
+				"subject": "Delvis genåbning af Herningsholm Gymnasium",
+				"message": "Kære elever\n\nVedhæftet finder I information om den delvise genåbning af Herningsholm Gymnasium.\nVenlig hilsen\nGymnasieledelsen"
+			}
+		}
+	},
+
+	"user2":
+	{
+		"absence": [0, 0, 100, 0, 0],
+		"messages":
+		{
+			"1":
+			{
+				"unread": false,
+				"date": "14.04.2020",
+				"sender": "MHC",
+				"subject": "Delvis genåbning af Herningsholm Gymnasium",
+				"message": "Kære elever\n\nVedhæftet finder I information om den delvise genåbning af Herningsholm Gymnasium.\nVenlig hilsen\nGymnasieledelsen"
+			}
+		}
+	}
+}

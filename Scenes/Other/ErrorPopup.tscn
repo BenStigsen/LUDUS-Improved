@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Other/ErrorPopup.gd" type="Script" id=1]
+
+[node name="ErrorPopup" type="AcceptDialog"]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -164.0
+margin_top = -97.0
+margin_right = 165.0
+margin_bottom = 46.0
+window_title = "Fejl!"
+resizable = true
+dialog_text = "Der skete en intern fejl!
+Lukker programmet"
+dialog_autowrap = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="confirmed" from="." to="." method="_on_ErrorPopup_confirmed"]
