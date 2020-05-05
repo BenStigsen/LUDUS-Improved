@@ -6,9 +6,7 @@ This was made as a school project which also means that it's not an actual repla
 
 The UI is written in Danish, all of the code and the node names are English.
 
-![Screenshot.png](D:\Projects\Godot%20Projects\LUDUS%20-%20Improved\Screenshot.png)
-
-
+![](./Screenshot.png)
 
 ---
 
