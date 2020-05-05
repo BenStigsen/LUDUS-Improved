@@ -17,6 +17,8 @@ _global_script_class_icons={
 
 config/name="Ludus - Improved"
 run/main_scene="res://Scenes/Login/Login.tscn"
+run/low_processor_mode=true
+run/low_processor_mode_sleep_usec=13800
 config/icon="res://icon.png"
 
 [display]
